@@ -8,6 +8,8 @@ angular.module('myApp')
       mainCharacter,
       CharacterVersionFactory,
       BookService) {
+      console.log(BookService.getBooks());
+      console.log(BookService.getBook(2));
       $scope.myFirstName = 'Jesse';
       $scope.myModel = 'Ready Player One';
       $scope.mainCharacter = mainCharacter;
