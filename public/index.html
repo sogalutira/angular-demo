@@ -76,7 +76,7 @@
     </label>
   </div>
     <ul>
-      <li ng-repeat="book in BookService.books | filter: { title: bookTitleFilterValue }">
+      <li ng-repeat="book in BookService.books | filter: { title: bookTitleFilterValue } | orderBy: 'title'">
         <h4>
           {{ book.title }}
         </h4>
@@ -89,7 +89,7 @@
     Movies:
   </div>
     <ul>
-      <li ng-repeat="movie in movies | beforeYearFilter: 1983">
+      <li ng-repeat="movie in movies | beforeYearFilter: 1983 | orderBy: '-year'">
         <h4>
           {{ movie.title }}
         </h4>
