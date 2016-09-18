@@ -89,7 +89,7 @@
     Movies:
   </div>
     <ul>
-      <li ng-repeat="movie in movies | beforeYearFilter: 1983 | orderBy: '-year'">
+      <li ng-repeat="movie in movies | orderBy: '-year'">
         <h4>
           {{ movie.title }}
         </h4>
