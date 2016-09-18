@@ -4,13 +4,19 @@ angular.module('myApp')
     'mainCharacter',
     'CharacterVersionFactory',
     'BookService',
+    'Movies',
     function($scope,
       mainCharacter,
       CharacterVersionFactory,
-      BookService) {
+      BookService, Movies) {
       $scope.myFirstName = 'Jesse';
       $scope.myModel = 'Ready Player One';
       $scope.mainCharacter = mainCharacter;
       $scope.CharacterVersionFactory = CharacterVersionFactory;
       $scope.BookService = BookService;
+      $scope.movies = [];
+      Movies.getMovies()
+        .then((response) => {
+          $scope.movies = response.data;
+        });
     }]);
