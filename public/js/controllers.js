@@ -3,8 +3,11 @@ angular.module('myApp')
     '$scope',
     'mainCharacter',
     'CharacterVersionFactory',
-    function($scope, mainCharacter, CharacterVersionFactory) {
-      console.log(CharacterVersionFactory);
+    'BookService',
+    function($scope,
+      mainCharacter,
+      CharacterVersionFactory,
+      BookService) {
       $scope.myFirstName = 'Jesse';
       $scope.myModel = 'Ready Player One';
       $scope.mainCharacter = mainCharacter;

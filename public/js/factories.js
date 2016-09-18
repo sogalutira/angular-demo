@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .factory(CharacterVersionFactory, [
+  .factory('CharacterVersionFactory', [
     'mainCharacter',
     'APP_VERSION',
     characterVersionFactory
