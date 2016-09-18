@@ -24,9 +24,43 @@
   </div>
   <h4>Version: {{APP_VERSION}}</h4>
   <div>Character Version: {{ CharacterVersionFactory }}</div>
-  <div>Books:</div>
+  <div>
+    <label>
+      Title
+      <input
+        type="text"
+        name="title"
+        placeholder="Goosebumps"
+        ng-model="title"
+      >
+    </label>
+    <label>
+      Author
+      <input
+        type="text"
+        name="author"
+        placeholder="R.L. Stein"
+        ng-model="author"
+      >
+    </label>
+    <button
+      ng-click="BookService.addBook(
+        {
+        title: title,
+        author: author,
+        }
+      );"
+    >
+      Add Book
+    </button>
+  </div>
+  <div>
+    Books:
+  </div>
+
+
     <ul>
-      <li ng-repeat="book in books">
+      <li ng-repeat="book in BookService.books">
         <h4>
           {{ book.title }}
         </h4>
