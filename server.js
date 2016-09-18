@@ -23,7 +23,7 @@ const movies = [
   {
     id: 4,
     title: 'Star Wars: A New Hope',
-    year: 1971
+    year: 1977
   },
   {
     id: 5,

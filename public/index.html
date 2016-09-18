@@ -75,7 +75,7 @@
     Movies:
   </div>
     <ul>
-      <li ng-repeat="movie in movies ">
+      <li ng-repeat="movie in movies | filter: { title: 'Star Wars' } ">
         <h4>
           {{ movie.title }}
         </h4>
